@@ -22,4 +22,6 @@ if __name__ == "__main__":
         "/": div
     }
 
-    print("{} {} {} = {}".format(left_operant, operator, rihgt_operant, ops[operator](left_operant, rihgt_operant)))
+    print("{} {} {} = {}".format(left_operant, operator,
+                                 rihgt_operant,
+                                 ops[operator](left_operant, rihgt_operant)))
