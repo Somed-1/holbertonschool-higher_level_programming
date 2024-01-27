@@ -15,11 +15,6 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
 
-    ops = {
-        "+": add,
-        "-": sub,
-        "*": mul,
-        "/": div
-    }
+    ops = {"+": add, "-": sub, "*": mul, "/": div}
 
     print("{} {} {} = {}".format(a, operator, b, ops[operator](a, b)))
