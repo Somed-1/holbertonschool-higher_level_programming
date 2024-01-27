@@ -8,7 +8,7 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    left_operant, rihgt_operant = int(argv[1]), int(argv[3])
+    a, b = int(argv[1]), int(argv[3])
     operator = argv[2]
     
     if operator not in "+-*/":
@@ -22,6 +22,4 @@ if __name__ == "__main__":
         "/": div
     }
 
-    print("{} {} {} = {}".format(left_operant, operator,
-                                 rihgt_operant,
-                                 ops[operator](left_operant, rihgt_operant)))
+    print("{} {} {} = {}".format(a, operator, b, ops[operator](a, b)))
