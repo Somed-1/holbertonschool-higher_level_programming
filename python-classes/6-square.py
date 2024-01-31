@@ -25,8 +25,10 @@ class Square:
         Public instance method that pritns the current square.
         """
         if self.size > 0:
+            for i in range(self.position[1]):
+                print()
             for i in range(self.size):
-                print("{}".format("#" * self.size))
+                print("{}{}".format(self.position[0] * " ", "#" * self.size))
         else:
             print()
 
