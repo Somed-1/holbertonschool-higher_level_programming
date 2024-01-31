@@ -22,8 +22,9 @@ class Square:
         """
         Public instance method that pritns the current square.
         """
-        for i in range(self.size):
-            print("{}".format("#" * self.size))
+        if sefl.size > 0:
+            for i in range(self.size):
+                print("{}".format("#" * self.size))
 
     @property
     def size(self):
