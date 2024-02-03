@@ -68,12 +68,12 @@ class Square:
             string that represents object
         """
         result = []
+        for i in range(self.position[1]):
+            result.append("")
         if self.size > 0:
-            for i in range(self.position[1]):
-                result.append("")
             for i in range(self.size):
                 result.append("{}{}".format(self.position[0] * " ", "#" * self.size))
         else:
-            return "\n"
+            result.append("")
 
         return "\n".join(result)
