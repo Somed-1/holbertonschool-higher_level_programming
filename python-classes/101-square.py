@@ -70,10 +70,10 @@ class Square:
         result = []
         if self.size > 0:
             for i in range(self.position[1]):
-                result.append("\n")
+                result.append("")
             for i in range(self.size):
-                result.append("{}{}\n".format(self.position[0] * " ", "#" * self.size))
+                result.append("{}{}".format(self.position[0] * " ", "#" * self.size))
         else:
             return "\n"
 
-        return "".join(result)
+        return "\n".join(result)
