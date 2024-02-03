@@ -8,7 +8,7 @@ This module contains:
 
 class Node:
     """Node class, an element of singly linked list"""
-    def __init__(self, data, next_node=None) -> None:
+    def __init__(self, data, next_node=None):
         """
         __init__ - method to inicialize the instance of Node
         Args:
@@ -36,11 +36,11 @@ class Node:
 
     @next_node.setter
     def next_node(self, value):
-        if not isinstance(value, (Node)) or not value is None:
+        if not isinstance(value, (Node)) and value:
             raise TypeError("next_node must be a Node object")
-        self.__next_node == value
+        self.__next_node = value
 
-    def __str__(self) -> str:
+    def __str__(self):
         """
         __str__ - method that is used for stdout
         Return:
@@ -50,7 +50,7 @@ class Node:
 
 class SinglyLinkedList:
     """SinglyLinkedList calss, implements singly linked list"""
-    def __init__(self) -> None:
+    def __init__(self):
         """
         __init__ - method to inicialize the instance of Node
         Return:
@@ -66,13 +66,24 @@ class SinglyLinkedList:
         Return:
             None
         """
-        if not isinstance(value, (Node)):
-            raise TypeError("value must be a Node object")
+        value = Node(value)
         cur = self.head
-        while cur:
-            if value.data >= cur.data:
-                cur.next_node, value.next_node = value, cur.next_node
-                break
+
+        if cur is None:
+            self.head = value
+            return
+
+        if value.data <= cur.data:
+            self.head = value
+            value.next_node = cur
+
+        while cur.next_node:
+            if value.data <= cur.next_node.data:
+                value.next_node, cur.next_node = cur.next_node, value
+                return
+            cur = cur.next_node
+
+        value.next_node, cur.next_node = cur.next_node, value
 
     @property
     def head(self):
@@ -80,8 +91,9 @@ class SinglyLinkedList:
 
     @head.setter
     def head(self, value):
-        if not isinstance(value, (Node)) or not value is None:
+        if not isinstance(value, (Node)) and value:
             raise TypeError("head must be a Node object")
+        self.__head = value
 
     def __str__(self) -> str:
         """
