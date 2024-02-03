@@ -74,7 +74,9 @@ class Square:
             result.append("")
         if self.size > 0:
             for i in range(self.size):
-                result.append("{}{}".format(self.position[0] * " ", "#" * self.size))
+                result.append(
+                    "{}{}".format(self.position[0] * " ", "#" * self.size)
+                )
         else:
             return ""
 
