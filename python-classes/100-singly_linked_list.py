@@ -48,6 +48,7 @@ class Node:
         """
         return "{:d}".format(self.data)
 
+
 class SinglyLinkedList:
     """SinglyLinkedList calss, implements singly linked list"""
     def __init__(self):
@@ -68,7 +69,6 @@ class SinglyLinkedList:
         """
         value = Node(value)
         cur = self.head
-
 
         if cur is None:
             self.head = value
