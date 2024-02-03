@@ -44,7 +44,7 @@ class Square:
         if not isinstance(__value, (Square)):
             raise TypeError("__value must be a Square")
         return self.area() < __value.area()
-    
+
     def __le__(self, __value):
         if not isinstance(__value, (Square)):
             raise TypeError("__value must be a Square")
