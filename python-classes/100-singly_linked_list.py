@@ -69,6 +69,7 @@ class SinglyLinkedList:
         value = Node(value)
         cur = self.head
 
+
         if cur is None:
             self.head = value
             return
@@ -76,6 +77,7 @@ class SinglyLinkedList:
         if value.data <= cur.data:
             self.head = value
             value.next_node = cur
+            return
 
         while cur.next_node:
             if value.data <= cur.next_node.data:
