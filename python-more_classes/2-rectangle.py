@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Class Rectangle"""
-    def __init__(self, width=0, height=0) -> None:
+    def __init__(self, width=0, height=0):
         """
         __init__ - method to inicialize an instance of class
         Args:
