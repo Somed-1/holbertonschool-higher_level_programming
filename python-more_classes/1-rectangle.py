@@ -5,6 +5,14 @@
 class Rectangle:
     """Class Rectangle"""
     def __init__(self, width=0, height=0) -> None:
+        """
+        __init__ - method to inicialize an instance of class
+        Args:
+            width: width of Rectangle
+            height: height of Rectangle
+        Return:
+            nothing
+        """
         self.width = width
         self.height = height
 
