@@ -68,6 +68,7 @@ class Rectangle:
         symbol = str(self.print_symbol)
         result = "\n".join(symbol * self.width for i in range(self.height))
         return result
+
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
 
