@@ -14,7 +14,7 @@ class Rectangle:
         Return:
             nothing
         """
-        Rectangle.add_number_of_instances()
+        self.add_number_of_instances()
         self.width = width
         self.height = height
 
@@ -69,7 +69,7 @@ class Rectangle:
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
-        Rectangle.remove_number_of_instances()
+        self.remove_number_of_instances()
         print("Bye rectangle...")
 
     @classmethod
