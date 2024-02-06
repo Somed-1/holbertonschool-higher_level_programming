@@ -95,12 +95,3 @@ class Rectangle:
         if area_1 >= area_2:
             return rect_1
         return rect_2
-
-
-if __name__ == "__main__":
-    my_rectangle_1 = Rectangle(8, 4)
-    my_rectangle_2 = Rectangle(1, 8)
-    try:
-        print(my_rectangle_2 == Rectangle.bigger_or_equal(my_rectangle_1, "Rect"))
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
