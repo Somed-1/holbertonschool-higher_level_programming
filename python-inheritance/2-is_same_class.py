@@ -3,6 +3,6 @@
 
 
 def is_same_class(obj, a_class):
-   """is same class function"""
+   """is_same_class function"""
 
    return type(obj) is a_class
