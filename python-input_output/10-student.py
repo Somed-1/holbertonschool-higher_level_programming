@@ -10,7 +10,8 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, keys=[]):
-        if keys:
-            return {key: self.__dict__.get(key) for key in keys}
+    def to_json(self, *args):
+        if args:
+            if args[0]:
+                return {key: self.__dict__.get(key) for key in args[0]}
         return self.__dict__
