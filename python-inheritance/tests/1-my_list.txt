@@ -6,6 +6,9 @@ Tests for text_indentation in 1-my_list.py
 
 >>> arr = MyList([1, 2, 3, 4, 5])
 
+>>> arr
+[1, 2, 3, 4, 5]
+
 >>> arr.print_sorted()
 [1, 2, 3, 4, 5]
 
@@ -23,3 +26,8 @@ Tests for text_indentation in 1-my_list.py
 
 >>> arr.print_sorted()
 [-5, -1, 0, 1, 2, 6]
+
+>>> arr = MyList([])
+
+>>> arr.print_sorted()
+[]
