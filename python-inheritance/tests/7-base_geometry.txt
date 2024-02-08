@@ -10,6 +10,10 @@ Tests for text_indentation in 1-my_list.py
 Traceback (most recent call last):
 TypeError: name must be an integer
 
+>>> bg.integer_validator("age")
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 2 were given
+
 >>> bg.integer_validator("age", 0)
 Traceback (most recent call last):
 ValueError: age must be greater than 0
