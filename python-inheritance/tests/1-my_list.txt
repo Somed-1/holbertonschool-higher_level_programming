@@ -20,6 +20,7 @@ Tests for text_indentation in 1-my_list.py
 [1, 2, 3, 4, 5, 10]
 
 >>> type(arr.print_sorted()) == list
+[1, 2, 3, 4, 5, 10]
 False
 
 >>> arr = MyList([2, 1, 5, 7])
