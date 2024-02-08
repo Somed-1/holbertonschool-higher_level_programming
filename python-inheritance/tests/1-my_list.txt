@@ -12,6 +12,11 @@ Tests for text_indentation in 1-my_list.py
 >>> arr.print_sorted()
 [1, 2, 3, 4, 5]
 
+>>> arr.append(10)
+
+>>> arr.print_sorted()
+[1, 2, 3, 4, 5, 10]
+
 >>> arr = MyList([2, 1, 5, 7])
 
 >>> arr.print_sorted()
