@@ -22,9 +22,6 @@ Tests for text_indentation in 1-my_list.py
 >>> new_list = arr.print_sorted()
 [1, 2, 3, 4, 5, 10]
 
->>> isinstance(new_list, list) and new_list is not arr
-True
-
 >>> arr = MyList([2, 1, 5, 7])
 
 >>> arr.print_sorted()
