@@ -14,4 +14,6 @@ class Student:
         if args:
             if args[0]:
                 return {key: self.__dict__.get(key) for key in args[0]}
+            else:
+                return type(self)
         return self.__dict__
