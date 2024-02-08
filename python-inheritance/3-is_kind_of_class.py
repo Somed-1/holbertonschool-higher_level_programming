@@ -8,4 +8,4 @@ def is_kind_of_class(obj, a_class):
     """is_kind_of_class - returns if obj is a subclass of a_class"""
 
 
-    return issubclass(obj, a_class)
+    return issubclass(type(obj), a_class)
