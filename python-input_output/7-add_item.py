@@ -10,7 +10,7 @@ def main():
 
     try:
         obj = load_from_json_file("add_item.json")
-    except:
+    except FileNotFoundError:
         obj = []
     obj += argv[1:]
     save_to_json_file(obj, "add_item.json")
