@@ -1,27 +1,25 @@
 ===================================================
-Tests for text_indentation in 0-add_integer.py
+Tests for text_indentation in 1-my_list.py
 ===================================================
 
+>>> MyList = __import__("1-my_list").MyList
+
 >>> arr = MyList([1, 2, 3, 4, 5])
-[1, 2, 3, 4, 5]
 
 >>> arr.print_sorted()
 [1, 2, 3, 4, 5]
 
 >>> arr = MyList([2, 1, 5, 7])
-[2, 1, 5, 7]
 
 >>> arr.print_sorted()
 [1, 2, 5, 7]
 
 >>> arr = MyList((1, 2, 3, 4))
-[1, 2, 3, 4]
 
 >>> arr.print_sorted()
 [1, 2, 3, 4]
 
 >>> arr = MyList([-1, 1, 0, 2, -5, 6])
-[-1, 1, 0, 2, -5, 6]
 
 >>> arr.print_sorted()
 [-5, -1, 0, 1, 2, 6]
