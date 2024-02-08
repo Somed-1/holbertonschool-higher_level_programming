@@ -19,9 +19,11 @@ Tests for text_indentation in 1-my_list.py
 >>> arr.print_sorted()
 [1, 2, 3, 4, 5, 10]
 
->>> type(arr.print_sorted()) == list
+>>> new_list = arr.print_sorted()
 [1, 2, 3, 4, 5, 10]
-False
+
+>>> isinstance(new_list, list) and new_list is not arr
+True
 
 >>> arr = MyList([2, 1, 5, 7])
 
