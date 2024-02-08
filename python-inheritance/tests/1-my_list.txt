@@ -14,14 +14,13 @@ Tests for text_indentation in 1-my_list.py
 >>> arr.print_sorted()
 [1, 2, 3, 4, 5]
 
->>> prev == id(arr)
-True
-
 >>> arr.append(10)
 
 >>> arr.print_sorted()
 [1, 2, 3, 4, 5, 10]
 
+>>> type(arr.print_sorted()) == list
+False
 
 >>> arr = MyList([2, 1, 5, 7])
 
