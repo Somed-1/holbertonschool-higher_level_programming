@@ -5,6 +5,8 @@
 def pascal_triangle(n):
     """pascal_triangle function"""
 
+    if n == 0:
+        return []
     rows = [[1]]
     for j in range(n - 1):
         above = [0] + rows[-1] + [0]
