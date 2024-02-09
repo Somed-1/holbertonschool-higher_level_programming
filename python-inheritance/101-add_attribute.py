@@ -5,4 +5,7 @@
 def add_attribute(instance, name, value):
     """add_attribute function"""
 
-    setattr(instance, name, value)
+    try:
+        setattr(instance, name, value)
+    except AttributeError:
+        raise TypeError("can't a new attribute")
