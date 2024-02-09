@@ -11,7 +11,8 @@ class LockedClass:
         if __name == "first_name":
             super().__setattr__(__name, __value)
         else:
-            raise AttributeError(f"'LockedClass' object has no attribute '{__name}'")
+            text = f"'LockedClass' object has no attribute '{__name}'"
+            raise AttributeError(text)
 
     def __getattribute__(self, __name):
         """__getattribute__ method"""
@@ -19,4 +20,5 @@ class LockedClass:
         if __name == "first_name":
             super().__getattribute__(__name)
         else:
-            raise AttributeError(f"'LockedClass' object has no attribute '{__name}'")
+            text = f"'LockedClass' object has no attribute '{__name}'"
+            raise AttributeError(text)
