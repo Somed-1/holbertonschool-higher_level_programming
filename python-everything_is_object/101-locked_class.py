@@ -13,7 +13,7 @@ class LockedClass:
         else:
             print(f"[AttributeError] 'LockedClass' object has no attribute '{__name}'")
 
-    def __getattribute__(self, __name: str) -> Any:
+    def __getattribute__(self, __name):
         """__getattribute__ method"""
 
         if __name == "first_name":
