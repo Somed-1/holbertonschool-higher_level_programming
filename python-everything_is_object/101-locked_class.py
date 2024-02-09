@@ -11,4 +11,4 @@ class LockedClass:
         if __name == "first_name":
             super().__setattr__(__name, __value)
         else:
-            print(f"'LockedClass' object has no attribute '{__name}'")
+            print(f"[AttributeError] 'LockedClass' object has no attribute '{__name}'")
