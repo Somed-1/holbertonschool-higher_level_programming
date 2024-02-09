@@ -7,3 +7,5 @@ def add_attribute(instance, name, value):
 
     if hasattr(instance, "__dict__"):
         setattr(instance, name, value)
+    else:
+        raise TypeError("can't add new attribute")
