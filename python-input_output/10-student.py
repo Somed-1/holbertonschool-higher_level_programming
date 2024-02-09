@@ -13,6 +13,6 @@ class Student:
     def to_json(self, keys=None):
         if keys is not None:
             if all(isinstance(i, str) for i in keys):
-                new = {key: getattr(self, key) for key in keys if hasattr(self, key)}
-                return new
+                n = {key: getattr(self, key) for key in keys if hasattr(self, key)}
+                return n
         return self.__dict__
