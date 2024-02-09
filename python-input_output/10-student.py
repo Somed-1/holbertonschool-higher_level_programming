@@ -12,6 +12,6 @@ class Student:
 
     def to_json(self, keys=None):
         if keys is not None:
-            if all(type(i) == str for i in keys):
+            if all(isinstance(i, str) for i in keys):
                 return {key: getattr(self, key) for key in keys if hasattr(self, key)}
         return self.__dict__
