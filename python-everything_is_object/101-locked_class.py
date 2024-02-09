@@ -20,3 +20,4 @@ class LockedClass:
             super().__getattribute__(__name)
         else:
             print(f"[AttributeError] 'LockedClass' object has no attribute '{__name}'")
+            return ''
