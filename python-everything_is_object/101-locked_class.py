@@ -14,6 +14,8 @@ class LockedClass:
             print(f"[AttributeError] 'LockedClass' object has no attribute '{__name}'")
 
     def __getattribute__(self, __name: str) -> Any:
+        """__getattribute__ method"""
+
         if __name == "first_name":
             super().__getattribute__(__name)
         else:
