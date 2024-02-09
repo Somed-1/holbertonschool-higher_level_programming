@@ -5,7 +5,7 @@
 class LockedClass:
     """LockedClass class"""
 
-    def __setattr__(self, __name: str, __value: Any) -> None:
+    def __setattr__(self, __name, __value):
         """__setattr__ method"""
 
         if __name == "first_name":
