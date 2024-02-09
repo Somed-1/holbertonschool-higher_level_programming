@@ -8,4 +8,4 @@ def add_attribute(instance, name, value):
     try:
         setattr(instance, name, value)
     except AttributeError:
-        raise TypeError("can't a new attribute")
+        raise TypeError("can't add new attribute")
