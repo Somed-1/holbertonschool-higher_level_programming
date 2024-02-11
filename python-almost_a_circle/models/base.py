@@ -7,6 +7,9 @@ class Base:
 
     __nb_objects = 0
     def __init__(self, id=None) -> None:
+        """
+        __init__ method of class Base
+        """
         if id is None:
             self.increase_nb()
             self.id = self.__nb_objects
