@@ -6,10 +6,10 @@ from base import Base
 class Rectangle(Base):
     """class Rectangle"""
 
-    def __init__(self, width, height, x, y, *args) -> None:
+    def __init__(self, width, height, x, y, id=None) -> None:
         """__init__ method of class Rectangle"""
 
-        super().__init__(*args)
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
