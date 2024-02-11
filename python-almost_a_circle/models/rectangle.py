@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """This module contains class Rectangle."""
+from base import Base
 
 
-class Rectangle:
+class Rectangle(Base):
     """class Rectangle"""
 
-    def __init__(self, width, height, x, y) -> None:
+    def __init__(self, width, height, x, y, *args) -> None:
         """__init__ method of class Rectangle"""
 
+        super().__init__(*args)
         self.width = width
         self.height = height
         self.x = x
