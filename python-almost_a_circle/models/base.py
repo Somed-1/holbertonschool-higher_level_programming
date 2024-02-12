@@ -23,7 +23,7 @@ class Base:
         """to_json_string method of class Base"""
         if list_dictionaries:
             return json.dumps(list_dictionaries)
-        return []
+        return "[]"
 
     @classmethod
     def increase_nb(cls):
