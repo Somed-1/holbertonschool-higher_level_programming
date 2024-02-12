@@ -80,6 +80,6 @@ class Rectangle(Base):
         """__str__ method of class Rectangle"""
         template = "[Rectangle] ({}) {}/{} - {}/{}"
         return template.format(
-            self.id, self.x, 
-            self.y, self.width, 
+            self.id, self.x,
+            self.y, self.width,
             self.height)
