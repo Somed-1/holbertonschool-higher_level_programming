@@ -12,5 +12,8 @@ class Square(Rectangle):
 
     def __str__(self) -> str:
         """__str__ method of class Square"""
-        rectangle_str = super().__str__()
-        return rectangle_str.replace("Rectangle", "Square")
+        template = "[Square] ({}) {}/{} - {}/{}"
+        return template.format(
+            self.id, self.x,
+            self.y, self.width,
+            self.height)
