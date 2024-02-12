@@ -18,12 +18,16 @@ class Rectangle(Base):
         """area method of class Rectangle"""
         return self.width * self.height
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update method of class Rectangle"""
-        attributes = ["id", "width", "height", "x", "y"]
-        attributes = zip(attributes, args)
-        for attr in attributes:
-            setattr(self, attr[0], attr[1])
+        if args:
+            attributes = ["id", "width", "height", "x", "y"]
+            attributes = zip(attributes, args)
+            for attr in attributes:
+                setattr(self, attr[0], attr[1])
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def display(self):
         """display method of class Rectangle"""
