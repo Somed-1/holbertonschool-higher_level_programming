@@ -14,15 +14,15 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def _check_size(self, name, value):
-        """_check_size method to check size"""
+    def check_size(self, name, value):
+        """check_size method to check size"""
         if not isinstance(value, (int, float)):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be >= 0")
 
-    def _check_cords(self, name, value):
-        """_check_cords method to check cords"""
+    def check_cords(self, name, value):
+        """check_cords method to check cords"""
         if not isinstance(value, (int, float)):
             raise TypeError(f"{name} must be an integer")
         if value < 0:
@@ -35,7 +35,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        self._check_size("width", value)
+        self.check_size("width", value)
         self.__width = value
 
     @property
@@ -45,7 +45,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self._check_size("height", value)
+        self.check_size("height", value)
         self.__height = value
 
     @property
@@ -55,7 +55,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self._check_cords("x", value)
+        self.check_cords("x", value)
         self.__x = value
 
     @property
@@ -65,5 +65,5 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self._check_cords("y", value)
+        self.check_cords("y", value)
         self.__y = value
