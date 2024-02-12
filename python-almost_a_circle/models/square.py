@@ -20,7 +20,7 @@ class Square(Rectangle):
         )
 
     def update(self, *args, **kwargs):
-        """update method of class Rectangle"""
+        """update method of class Square"""
         if args:
             attributes = ["id", "size", "x", "y"]
             attributes = zip(attributes, args)
@@ -29,6 +29,15 @@ class Square(Rectangle):
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        """to_dictionary method of class Square"""
+        return {
+            "id": self.id,
+            "size": self.size,
+            "x": self.x,
+            "y": self.y
+        }
 
     @property
     def size(self):
