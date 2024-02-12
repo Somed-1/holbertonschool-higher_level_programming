@@ -14,6 +14,18 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def _check_size(self, name, value):
+        if not isinstance(value, (int, float)):
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be >= 0")
+
+    def _check_cords(self, name, value):
+        if not isinstance(value, (int, float)):
+            raise TypeError(f"{name} must be an integer")
+        if value < 0:
+            raise ValueError(f"{name} must be > 0")
+
     @property
     def width(self):
         """width attribute of class Rectangle"""
@@ -21,6 +33,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self._check_size("width", value)
         self.__width = value
 
     @property
@@ -30,6 +43,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        self._check_size("height", value)
         self.__height = value
 
     @property
@@ -39,6 +53,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        self._check_cords("x", value)
         self.__x = value
 
     @property
@@ -48,4 +63,5 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        self._check_cords("y", value)
         self.__y = value
