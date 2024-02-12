@@ -28,7 +28,7 @@ class Rectangle(Base):
             ["y", self.y]
         ]
         for idx, value in enumerate(args):
-            attributes[idx] = value
+            attributes[idx][1] = value
         for attr in attributes:
             if attr[1] != getattr(self, attr[0]):
                 setattr(self, attr[0], attr[1])
