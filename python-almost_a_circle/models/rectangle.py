@@ -20,18 +20,10 @@ class Rectangle(Base):
 
     def update(self, *args):
         """update method of class Rectangle"""
-        attributes = [
-            ["id", self.id],
-            ["width", self.width],
-            ["height", self.height],
-            ["x", self.x],
-            ["y", self.y]
-        ]
-        for idx, value in enumerate(args):
-            attributes[idx][1] = value
+        attributes = ["id", "width", "height", "x", "y"]
+        attributes = zip(attributes, args)
         for attr in attributes:
-            if attr[1] != getattr(self, attr[0]):
-                setattr(self, attr[0], attr[1])
+            setattr(self, attr[0], attr[1])
 
     def display(self):
         """display method of class Rectangle"""
