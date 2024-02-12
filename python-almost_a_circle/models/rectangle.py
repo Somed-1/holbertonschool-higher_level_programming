@@ -15,12 +15,14 @@ class Rectangle(Base):
         super().__init__(id)
 
     def _check_size(self, name, value):
+        """_check_size method to check size"""
         if not isinstance(value, (int, float)):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be >= 0")
 
     def _check_cords(self, name, value):
+        """_check_cords method to check cords"""
         if not isinstance(value, (int, float)):
             raise TypeError(f"{name} must be an integer")
         if value < 0:
