@@ -24,7 +24,7 @@ class Base:
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         serialized = [json.dumps(i) for i in list_dictionaries]
-        return f"[{",".join(serialized)}]"
+        return f"[{','.join(serialized)}]"
 
     @classmethod
     def increase_nb(cls):
