@@ -23,7 +23,8 @@ class Base:
         """to_json_string method of class Base"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-        return (json.dumps(list_dictionaries))
+        serialized = [json.dumps(i) for i in list_dictionaries]
+        return f"[{",".join(serialized)}]"
 
     @classmethod
     def increase_nb(cls):
