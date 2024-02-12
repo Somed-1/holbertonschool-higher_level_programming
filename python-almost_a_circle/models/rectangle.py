@@ -6,7 +6,7 @@ from base import Base
 class Rectangle(Base):
     """class Rectangle"""
 
-    def __init__(self, width, height, x=0, y=0, id=None) -> None:
+    def __init__(self, width, height, x=0, y=0, id=None):
         """__init__ method of class Rectangle"""
 
         super().__init__(id)
@@ -22,7 +22,9 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         if not isinstance(value, (int, float)):
-            raise TypeError("width must be integer")
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -32,7 +34,9 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         if not isinstance(value, (int, float)):
-            raise TypeError("heihgt must be integer")
+            raise TypeError("heihgt must be an integer")
+        if value <= 0:
+            raise ValueError("heihgt must be > 0")
         self.__height = value
 
     @property
@@ -42,7 +46,9 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         if not isinstance(value, (int, float)):
-            raise TypeError("x must be integer")
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -52,5 +58,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         if not isinstance(value, (int, float)):
-            raise TypeError("y must be integer")
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
