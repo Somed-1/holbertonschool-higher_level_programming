@@ -22,7 +22,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """update method of class Rectangle"""
         if args:
-            attributes = ["id", "szie", "x", "y"]
+            attributes = ["id", "size", "x", "y"]
             attributes = zip(attributes, args)
             for attr in attributes:
                 setattr(self, attr[0], attr[1])
