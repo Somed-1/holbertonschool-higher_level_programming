@@ -16,14 +16,14 @@ class Rectangle(Base):
 
     def check_size(self, name, value):
         """check_size method to check size"""
-        if not isinstance(value, (int, float)):
+        if not isinstance(value, (int, )):
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be >= 0")
 
     def check_cords(self, name, value):
         """check_cords method to check cords"""
-        if not isinstance(value, (int, float)):
+        if not isinstance(value, (int, )):
             raise TypeError(f"{name} must be an integer")
         if value < 0:
             raise ValueError(f"{name} must be > 0")
@@ -35,10 +35,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if not isinstance(value, (int, float)):
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be >= 0")
+        self.check_size("width", value)
         self.__width = value
 
     @property
