@@ -18,6 +18,10 @@ class Rectangle(Base):
         """area method of class Rectangle"""
         return self.width * self.height
 
+    def display(self):
+        """display method of class Rectangle"""
+        [print("#"*self.width) for i in range(self.height)]
+
     def check_size(self, name, value):
         """check_size method to check size"""
         if not isinstance(value, (int, )):
