@@ -14,6 +14,10 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def area(self):
+        """area method of class Rectangle"""
+        return self.width * self.height
+
     def check_size(self, name, value):
         """check_size method to check size"""
         if not isinstance(value, (int, )):
