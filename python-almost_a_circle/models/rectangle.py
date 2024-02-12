@@ -21,7 +21,7 @@ class Rectangle(Base):
     def display(self):
         """display method of class Rectangle"""
         [print() for i in range(self.y)]
-        [print(" "*self.x, "#"*self.width) for i in range(self.height)]
+        [print(" "*self.x + "#"*self.width) for i in range(self.height)]
 
     def check_size(self, name, value):
         """check_size method to check size"""
