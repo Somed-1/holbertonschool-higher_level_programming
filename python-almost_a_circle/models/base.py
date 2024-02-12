@@ -21,7 +21,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """to_json_string method of class Base"""
-        if list_dictionaries:
+        if list_dictionaries and len(list_dictionaries) > 0:
             return json.dumps(list_dictionaries)
         return "[]"
 
