@@ -75,3 +75,8 @@ class Rectangle(Base):
     def y(self, value):
         self.check_cords("y", value)
         self.__y = value
+
+    def __str__(self) -> str:
+        """__str__ method of class Rectangle"""
+        template = "[Rectangle] ({}) {}/{} - {}/{}"
+        return template.format(self.id, self.x, self.y, self.width, self.height)
