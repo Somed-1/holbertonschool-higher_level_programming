@@ -19,6 +19,18 @@ class Square(Rectangle):
             self.y, self.width
         )
 
+    def update(self, *args, **kwargs):
+        """update method of class Rectangle"""
+        if args:
+            attributes = ["id", "szie", "x", "y"]
+            attributes = zip(attributes, args)
+            for attr in attributes:
+                setattr(self, attr[0], attr[1])
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+
     @property
     def size(self):
         return self.width
