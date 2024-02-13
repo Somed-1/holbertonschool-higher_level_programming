@@ -20,11 +20,28 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """to_json_string method of class Base"""
-        if list_dictionaries is None or len(list_dictionaries) == 0:
+        if not list_dictionaries:
             return "[]"
-        return json.dumps(list_dictionaries)
+        
+        unified_dicts = []
+        for d in list_dictionaries:
+            unified_dict = {'id': d['id']}  # Always include 'id' key
+            if 'width' in d:
+                unified_dict['width'] = d['width']
+            if 'height' in d:
+                unified_dict['height'] = d['height']
+            if 'x' in d:
+                unified_dict['x'] = d['x']
+            if 'y' in d:
+                unified_dict['y'] = d['y']
+            if 'size' in d:
+                unified_dict['size'] = d['size']
+            if 'name' in d:
+                unified_dict['name'] = d['name']
+            unified_dicts.append(unified_dict)
+        
+        return json.dumps(unified_dicts)
 
-    @classmethod
+@classmethod
     def increase_nb(cls):
         cls.__nb_objects += 1
