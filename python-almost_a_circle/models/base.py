@@ -23,8 +23,6 @@ class Base:
         """to_json_string method of class Base"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-        if len(list_dictionaries) > 10:
-            print(list_dictionaries)
         return json.dumps(list_dictionaries)
 
     @classmethod
