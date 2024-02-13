@@ -42,6 +42,6 @@ class Base:
         
         return json.dumps(unified_dicts)
 
-@classmethod
+    @classmethod
     def increase_nb(cls):
         cls.__nb_objects += 1
