@@ -24,7 +24,7 @@ class Base:
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
-            return json.dumps(list_dictionaries)
+            return json.dumps(i for i in list_dictionaries if isinstance(i, dict))
 
     @classmethod
     def increase_nb(cls):
