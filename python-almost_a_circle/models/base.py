@@ -21,10 +21,9 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """to_json_string method of class Base"""
-        if list_dictionaries is None or not list_dictionaries:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-        else:
-            return f"[{','.join(json.dumps(i) for i in list_dictionaries if isinstance(i, dict))}]"
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def increase_nb(cls):
