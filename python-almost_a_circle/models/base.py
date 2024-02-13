@@ -23,7 +23,8 @@ class Base:
         """to_json_string method of class Base"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-        return json.dumps([element.__dict__ for element in list_dictionaries])
+        print(list_dictionaries)
+        return
 
     @classmethod
     def increase_nb(cls):
