@@ -1,42 +1,13 @@
 #!/usr/bin/python3
-"""This module contains class Square"""
+"""Docs for holberton checker"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Square class"""
+    """Docs for holberton checker"""
 
-    def __init__(self, size, x=0, y=0, id=None):
-        """__init__ method of class Square"""
+    def __init__(self, size, x=0, y=0, id=None) -> None:
         super().__init__(size, size, x, y, id)
-
-    def __str__(self) -> str:
-        """__str__ method of class Square"""
-        template = "[Square] ({}) {}/{} - {}"
-        return template.format(
-            self.id, self.x,
-            self.y, self.width
-        )
-
-    def update(self, *args, **kwargs):
-        """update method of class Square"""
-        if args:
-            attributes = ["id", "size", "x", "y"]
-            attributes = zip(attributes, args)
-            for attr in attributes:
-                setattr(self, attr[0], attr[1])
-        elif kwargs:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
-
-    def to_dictionary(self):
-        """to_dictionary method of class Square"""
-        return {
-            "id": self.id,
-            "size": self.size,
-            "x": self.x,
-            "y": self.y
-        }
 
     @property
     def size(self):
@@ -46,3 +17,29 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Docs for holberton checker"""
+
+        attribues = ['id', 'size', 'x', 'y']
+        if args and len(args) != 0:
+            for key, val in zip(attribues, args):
+                setattr(self, key, val)
+        elif kwargs and len(kwargs) != 0:
+            for key, val in kwargs.items():
+                if key in attribues:
+                    setattr(self, key, val)
+
+    def to_dictionary(self):
+        """Docs for holberton checker"""
+
+        return {
+            "id": self.id,
+            "x": self.x,
+            "size": self.size,
+            "y": self.y
+        }
+
+    def __str__(self):
+        return ("[Square] ({}) {}/{} - {}"
+                .format(self.id, self.x, self.y, self.width))
